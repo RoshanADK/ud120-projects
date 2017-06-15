@@ -23,11 +23,13 @@ features_train, features_test, labels_train, labels_test = preprocess()
 
 
 
+from sklearn.naive_bayes import GaussianNB
+clf = GaussianNB()
+clf.fit(features_train,labels_train)
+pred = clf.predict(features_test)
 
-#########################################################
-### your code goes here ###
+# La solti keto le aba Accuracy Print garchha hai tah , tayar bhayera basa :)
 
-
-#########################################################
-
+accuracy_value = clf.score(features_train,labels_train)
+return accuracy_value
 
